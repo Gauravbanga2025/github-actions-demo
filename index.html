@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaurav | WordPress • Flutter • DevOps</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.7;
+}
+
+/* ---------- Global ---------- */
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #cbd5f5;
+}
+
+/* ---------- About ---------- */
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #d1d5db;
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+}
+
+.skill-card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+/* ---------- DevOps Journey ---------- */
+.timeline {
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline-item {
+    background: #020617;
+    padding: 25px;
+    border-left: 4px solid #38bdf8;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+    color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="fade-in">
+        <h1>Hi, I'm <span>Gaurav</span></h1>
+        <p>WordPress Developer • Flutter Developer • Aspiring DevOps Engineer</p>
+    </div>
+</section>
+
+<!-- About -->
+<section>
+    <h2 class="fade-in">About Me</h2>
+    <div class="about-box fade-in">
+        I am a seasoned <strong>WordPress Developer</strong> with <strong>4–5 years of experience</strong> building
+        custom plugins, performance-optimized websites, and scalable solutions.  
+        Alongside this, I have <strong>2+ years of Flutter experience</strong> delivering cross-platform mobile
+        applications with clean architecture and real-time integrations.  
+        <br><br>
+        Currently, I am transitioning into <strong>DevOps</strong>, focusing on automating deployments,
+        managing cloud infrastructure, and building CI/CD pipelines — all while staying within
+        cost-efficient and production-ready practices.
+    </div>
+</section>
+
+<!-- Skills -->
+<section>
+    <h2 class="fade-in">Core Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card fade-in">
+            <h3>WordPress</h3>
+            <p>
+                Custom Plugins • WooCommerce • Performance Optimization • Security • PDF Generation • Advanced Admin Panels
+            </p>
+        </div>
+
+        <div class="skill-card fade-in">
+            <h3>Flutter</h3>
+            <p>
+                REST APIs • Firebase • Real-time Data • Clean UI • State Management • Production Apps
+            </p>
+        </div>
+
+        <div class="skill-card fade-in">
+            <h3>DevOps</h3>
+            <p>
+                AWS EC2 • Terraform • Docker • Jenkins • GitHub Actions • CI/CD Automation
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- DevOps Journey -->
+<section>
+    <h2 class="fade-in">My DevOps Journey</h2>
+    <div class="timeline">
+        <div class="timeline-item fade-in">
+            Migrated WordPress projects to AWS EC2 using Infrastructure as Code (Terraform).
+        </div>
+        <div class="timeline-item fade-in">
+            Automated deployments with Docker & Jenkins while staying within AWS Free Tier limits.
+        </div>
+        <div class="timeline-item fade-in">
+            Practicing CI/CD pipelines using GitHub Actions and real-world production scenarios.
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2026 Gaurav • Built with ❤️ and DevOps Mindset
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
